@@ -4,11 +4,28 @@ import Header from '../components/Header'
 import Link from 'next/link'
 import { Button, Radio, Space } from 'antd';
 import { useDispatch, useSelector } from 'react-redux'
+import styled, {css} from "styled-components"
 
 let guess=[0,0,0,0,0]
   console.log(guess)
 
 function QuestionPanel() {
+
+  //css
+  const H1 = styled.h1`
+    font-size: 40px; 
+    color:saddlebrown; 
+    text-align:center; 
+    padding-top:50px;
+  `
+
+  const H2 = styled.h2`
+    font-size: 20px; 
+    color:black; 
+    text-align:left; 
+    padding-top:0px;
+  `
+
   console.log("guess")
   console.log(guess)
   // let nowAt=0
@@ -114,8 +131,8 @@ const computeResult = () => {
 
   return (
     <div style={{position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
-      <h1>Question {nowAt+1}</h1>
-      <h3>{quest[nowAt]}</h3>
+      <H1>Question {nowAt+1}</H1>
+      <H2>{quest[nowAt]}</H2>
       <div>
 
       <Radio.Group onChange={onChangeRadio} value={answerValue}>
@@ -136,13 +153,13 @@ const computeResult = () => {
       </Radio.Group>
       </div>
       <br />
-      <Button type="primary" style={{ width: 200 }} onClick={swapQuestionDown} disabled={(nowAt==0)}>Previous</Button>
+      <Button style={{ width: 200 }} onClick={swapQuestionDown} disabled={(nowAt==0)}>Previous</Button>
       <span style={{marginLeft: '20px'}}></span>
-      <Button type="primary" style={{ width: 200 }} onClick={swapQuestionUp} disabled={(nowAt==quest.length-1)}>Next</Button>
+      <Button  style={{ width: 200 }} onClick={swapQuestionUp} disabled={(nowAt==quest.length-1)}>Next</Button>
       <br />
       <br />
       <Link href="/results">
-      <Button type="primary" style={{ width: "100%", justifyContent: 'center'}} onClick={computeResult} >Submit Answers</Button>
+      <Button type="primary" style={{ width: "100%", justifyContent: 'center', backgroundColor: "goldenrod"}} onClick={computeResult}>Submit Answers</Button>
       </Link>
     </div>
   )

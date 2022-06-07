@@ -22,8 +22,9 @@ export default function Results() {
       <Header />
       <div style={{position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
       <Result />
+      <br />
       <Link href="/">
-      <Button type="primary" style={{ width: "100%" }} onClick={changeNameToDefault}>To Home Page</Button>
+      <Button type="primary" style={{ width: "100%" , backgroundColor:"goldenrod"}} onClick={changeNameToDefault}>To Home Page</Button>
       </Link>
       </div>
     </div>  
