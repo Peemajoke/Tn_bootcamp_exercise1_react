@@ -1,7 +1,7 @@
 import React, { useMemo, useState ,useCallback } from 'react'
 import {questions} from '../public/questions'
 import Header from '../components/Header'
-import EnterName from '../components/EnterName'
+import QuestionPanel from '../components/QuestionPanel'
 import Link from 'next/link'
 import { Button, Radio, Space } from 'antd';
 import { useDispatch, useSelector } from 'react-redux'
@@ -116,12 +116,12 @@ const computeResult = () => {
   return (
     <div>
       <Header />
-      <h1>Question {nowAt+1}</h1>
+      {/* <h1>Question {nowAt+1}</h1>
       <h3>{quest[nowAt]}</h3>
       <div>
 
       <Radio.Group onChange={onChangeRadio} value={answerValue}>
-      <Space direction="vertical">
+      <Space direction="vertical"> */}
       {/* {questions.map((data,key) => {
         // console.log("the choices")
         // console.log(typeof(key))
@@ -133,8 +133,8 @@ const computeResult = () => {
           )
       })
       } */}
-      {showChoices()}
-      </Space>
+      {/* {showChoices()} */}
+      {/* </Space>
       </Radio.Group>
       </div>
       <br />
@@ -143,7 +143,8 @@ const computeResult = () => {
       <br />
       <Link href="/results">
       <Button type="primary" style={{ width: 200 }} onClick={computeResult}>Submit Answers</Button>
-      </Link>
+      </Link> */}
+      <QuestionPanel />
     </div>
   )
 }
