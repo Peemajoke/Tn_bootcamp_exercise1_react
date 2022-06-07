@@ -113,7 +113,7 @@ const computeResult = () => {
 }
 
   return (
-    <div>
+    <div style={{position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
       <h1>Question {nowAt+1}</h1>
       <h3>{quest[nowAt]}</h3>
       <div>
@@ -137,10 +137,12 @@ const computeResult = () => {
       </div>
       <br />
       <Button type="primary" style={{ width: 200 }} onClick={swapQuestionDown} disabled={(nowAt==0)}>Previous</Button>
+      <span style={{marginLeft: '20px'}}></span>
       <Button type="primary" style={{ width: 200 }} onClick={swapQuestionUp} disabled={(nowAt==quest.length-1)}>Next</Button>
       <br />
+      <br />
       <Link href="/results">
-      <Button type="primary" style={{ width: 200 }} onClick={computeResult}>Submit Answers</Button>
+      <Button type="primary" style={{ width: "100%", justifyContent: 'center'}} onClick={computeResult} >Submit Answers</Button>
       </Link>
     </div>
   )

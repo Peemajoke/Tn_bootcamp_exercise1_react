@@ -26,9 +26,20 @@ function EnterName() {
     console.log(playerName)
   }
 
+  //CSS
+//   const Button = styled.button`
+// color: palevioletred;
+// // background-color: cyan;
+// font-size: 1em;
+// padding: 0.25em 1em; //padding 0.25 emsize 1 em
+// margin: 1em;
+// border-radius: 3px;
+// border: 2px solid palevioletred; //border หนา 2 px, เป็นแบบ solid, สี palevioletred
+// `
+
   return (
-    <div>
-      {/* <h1>Please Enter your name</h1> */}
+    <div style={{position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
+      <h1 style={{justifyContent: 'center', alignItems: 'center', display: 'flex'}}>ขอชื่อครับ</h1>
       <Input placeholder="Please enter your name" style={{ width: 200 }} onChange={handleChangeText}/>
       <br />
       <br />

@@ -10,19 +10,19 @@ function Results() {
   const passOrFail = () => {
     if (isPass)
       return (
-        <div>สอบผ่าน คุณสุดยอด</div>
+        <div style={{ color: 'limegreen'}}>สอบผ่าน คุณสุดยอด</div>
       )
     else
       return(
-        <div>สอบไม่ผ่านนะจ๊ะ</div>
+        <div style={{ color: 'red'}}>สอบไม่ผ่านนะจ๊ะ</div>
       )
   }
 
   return (
     <div>
-      <h1>{passOrFail()}</h1>
-      <h2>คะแนนรวม</h2>
-      <h2>{obtainedScore}/{fullScore}</h2>
+      <h1 style={{justifyContent: 'center', alignItems: 'center', display: 'flex'}}>{passOrFail()}</h1>
+      <h2 style={{justifyContent: 'center', alignItems: 'center', display: 'flex'}}>คะแนนรวม</h2>
+      <h2 style={{justifyContent: 'center', alignItems: 'center', display: 'flex'}}>{obtainedScore}/{fullScore}</h2>
     </div>
   )
 }

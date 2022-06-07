@@ -5,9 +5,16 @@ import EnterName from '../components/EnterName'
 
 export default function Home() {
   return (
-    <div>
+    <div style={{background: 'beige', height: '100vh'}}>
       <Header />
-      <EnterName />
+      <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height:"100%"
+        }}>
+        <EnterName />
+      </div>
     </div>  
   )
 }

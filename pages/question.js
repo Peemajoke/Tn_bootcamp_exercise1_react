@@ -114,7 +114,7 @@ export default function question(props) {
 // }
 
   return (
-    <div>
+    <div style={{background: 'beige', height: '100vh'}}>
       <Header />
       {/* <h1>Question {nowAt+1}</h1>
       <h3>{quest[nowAt]}</h3>
