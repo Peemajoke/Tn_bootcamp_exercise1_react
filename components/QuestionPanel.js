@@ -13,14 +13,14 @@ function QuestionPanel() {
 
   //css
   const H1 = styled.h1`
-    font-size: 40px; 
+    font-size: 60px; 
     color:saddlebrown; 
     text-align:center; 
     padding-top:50px;
   `
 
   const H2 = styled.h2`
-    font-size: 20px; 
+    font-size: 30px; 
     color:black; 
     text-align:left; 
     padding-top:0px;
@@ -75,7 +75,7 @@ function QuestionPanel() {
     // })
     questions[nowAt].choice.forEach(item => {
       // console.log(item.text)
-      allChoices.push(<Radio value={item.id}>{item.text}</Radio>)
+      allChoices.push(<Radio value={item.id} style={{fontSize:"20px"}}>{item.text}</Radio>)
     })
     return allChoices
   }
@@ -153,13 +153,13 @@ const computeResult = () => {
       </Radio.Group>
       </div>
       <br />
-      <Button style={{ width: 200 }} onClick={swapQuestionDown} disabled={(nowAt==0)}>Previous</Button>
-      <span style={{marginLeft: '20px'}}></span>
-      <Button  style={{ width: 200 }} onClick={swapQuestionUp} disabled={(nowAt==quest.length-1)}>Next</Button>
+      <Button style={{ width: "47%", height:45 }} onClick={swapQuestionDown} disabled={(nowAt==0)}>Previous</Button>
+      <span style={{marginLeft: '35px'}}></span>
+      <Button  style={{ width: "47%", height:45 }} onClick={swapQuestionUp} disabled={(nowAt==quest.length-1)}>Next</Button>
       <br />
       <br />
       <Link href="/results">
-      <Button type="primary" style={{ width: "100%", justifyContent: 'center', backgroundColor: "goldenrod"}} onClick={computeResult}>Submit Answers</Button>
+      <Button type="primary" style={{ height:45, width: 600, justifyContent: 'center', backgroundColor: "goldenrod"}} onClick={computeResult}>Submit Answers</Button>
       </Link>
     </div>
   )

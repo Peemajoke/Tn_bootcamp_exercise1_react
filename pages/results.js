@@ -24,7 +24,7 @@ export default function Results() {
       <Result />
       <br />
       <Link href="/">
-      <Button type="primary" style={{ width: "100%" , backgroundColor:"goldenrod"}} onClick={changeNameToDefault}>To Home Page</Button>
+      <Button type="primary" style={{ height:45, width: 600 , backgroundColor:"goldenrod"}} onClick={changeNameToDefault}>To Home Page</Button>
       </Link>
       </div>
     </div>  

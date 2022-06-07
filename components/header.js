@@ -15,7 +15,7 @@ function Header() {
   return (
     <div style={{ width: '100%', height: '54px', background: 'lemonchiffon'}}>
       <div style={{margin: 'auto',  width: '100%', border: '3px solid darkgoldenrod', padding: '10px', flexDirection: 'row', display: 'flex'}}>
-        <Container style={{width: "90%", textAlign: "left"}}>Hakoot!</Container>
+        <Container style={{width: "100%", textAlign: "left"}}>Hakoot!</Container>
         <Container style={{}}>{theName}</Container>
       </div>
     </div>

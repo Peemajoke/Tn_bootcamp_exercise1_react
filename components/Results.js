@@ -6,14 +6,14 @@ function Results() {
 
   //css
   const Div = styled.div`
-  font-size: 50px; 
+  font-size: 60px; 
   text-align:center; 
   padding-top:0px;
   color: ${(props) => props.textColor || "black"}
 `
 
   const H2 = styled.h2`
-  font-size: 30px; 
+  font-size: 40px; 
   color:saddlebrown; 
   text-align:center; 
   padding-top:0px;

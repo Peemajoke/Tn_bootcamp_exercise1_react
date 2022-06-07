@@ -47,13 +47,13 @@ function EnterName() {
 
   return (
     <div style={{position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
-      <h1 style={{justifyContent: 'center', alignItems: 'center', display: 'flex', fontSize: "60px", color:"saddlebrown"}}>ขอชื่อครับ</h1>
-      <Input placeholder="Please enter your name" style={{ width: 300 }} onChange={handleChangeText}/>
+      <h1 style={{justifyContent: 'center', alignItems: 'center', display: 'flex', fontSize: "80px", color:"saddlebrown"}}>ขอชื่อครับ</h1>
+      <Input placeholder="Please enter your name" style={{ width: 600, height:45 }} onChange={handleChangeText}/>
       <br />
       <br />
       <Link href="/question">
         <ButtonContainer>
-          <Button type="primary" style={{ width: 300 }} onClick={changeName}>Take the Exam</Button>
+          <Button type="primary" style={{ width: 600, height:45 }} onClick={changeName}>Take the Exam</Button>
         </ButtonContainer>
       </Link>
     </div>
