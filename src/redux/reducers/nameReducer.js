@@ -4,7 +4,10 @@ const initialState = { //the initial state
   
   const nameReducer = (state = initialState, action) => {
     console.log("nameReducer")
-    return {...state, value: action.value};
+    if(action.type==="nameMode")
+      return {...state, value: action.value};
+    else
+      return {...state};
   }
 
   export default nameReducer

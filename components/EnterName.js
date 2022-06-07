@@ -10,7 +10,7 @@ function EnterName() {
   function sentName(text){
     console.log(playerName)
     const temp = {
-      type: 'DONT_CARE',
+      type: 'nameMode',
       value: text
     }
     console.log(temp)
