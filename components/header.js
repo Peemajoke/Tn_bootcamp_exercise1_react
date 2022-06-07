@@ -8,7 +8,7 @@ function Header() {
   return (
     <div style={{ width: '2000px', height: '60px', background: 'gray'}}>
       <div style={{margin: 'auto',  width: '100%', border: '3px solid green', padding: '10px', display: 'flex', flexDirection: 'row'}}>
-        <div>Exam plus plus</div>
+        <div>Hakoot!</div>
         <div style={{alignSelf: 'flex-end'}}>{theName}</div>
       </div>
     </div>

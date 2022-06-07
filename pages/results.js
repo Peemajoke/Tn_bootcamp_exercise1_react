@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import Header from '../components/Header'
-import EnterName from '../components/EnterName'
+import Result from '../components/Results'
 import Link from 'next/link'
 import { useDispatch } from 'react-redux'
 import { Button } from 'antd';
@@ -9,7 +9,7 @@ export default function Results() {
 
     function resetName(){
         const temp = {
-          type: 'DONT_CARE',
+          type: 'nameMode',
           value: ''
         }
         return temp
@@ -20,6 +20,7 @@ export default function Results() {
   return (
     <div>
       <Header />
+      <Result />
       <Link href="/">
       <Button type="primary" style={{ width: 200 }} onClick={changeNameToDefault}>To Home Page</Button>
       </Link>

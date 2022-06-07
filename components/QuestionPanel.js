@@ -136,8 +136,8 @@ const computeResult = () => {
       </Radio.Group>
       </div>
       <br />
-      <Button type="primary" style={{ width: 200 }} onClick={swapQuestionDown}>Previous</Button>
-      <Button type="primary" style={{ width: 200 }} onClick={swapQuestionUp}>Next</Button>
+      <Button type="primary" style={{ width: 200 }} onClick={swapQuestionDown} disabled={(nowAt==0)}>Previous</Button>
+      <Button type="primary" style={{ width: 200 }} onClick={swapQuestionUp} disabled={(nowAt==quest.length-1)}>Next</Button>
       <br />
       <Link href="/results">
       <Button type="primary" style={{ width: 200 }} onClick={computeResult}>Submit Answers</Button>
